@@ -21,13 +21,13 @@ header {
     position: relative;
     display: flex;
     margin: 0px 24px;
-    width: 934.46px;
+    width: 1088px;
     height: 72px;
     align-items: center;
   }
   
   .searchbody {
-    margin: 0px 16px 0px 328.15px;
+    margin: 0px 16px 0px 368.15px;
     width: 384px;
     height: 72px;
     display: flex;
@@ -65,7 +65,7 @@ header {
     display: flex;
     align-items: center;
     top: 50%;
-    left: 36.5%;
+    left: 39%;
     transform: translateY(-50%);
   }
 
@@ -82,7 +82,7 @@ header {
   }
   
   .learntext {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     color: #ffffff;
   }
@@ -106,14 +106,58 @@ header {
     
   }
 
+
+   /* Course Detail */
+
+   .coursecategories{
+    position: absolute;
+    top: 97%;
+  }
+
+  .coursedetail{
+    width: 13rem;
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(81,111,144,.2);
+  }
+
+  .coursetext{
+    font-size: 19px;
+    font-weight: 500;
+    color: #5e718d!important;
+  }
+
+  .coursepara{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+  }
+
+  .coursedropdown{
+    line-height: 2;
+    text-decoration: none;
+    font-family: Lexend Deca,Poppins,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-weight: 500;
+    color: #000000;
+    font-size: 16px;
+    padding: 0 13px;
+  }
+
+  .coursedropdown:hover{
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+  }
+
   /* Subscription */
 
   .subcriptiontext {
     width: 88px;
     height: 22px;
     display: flex;
-    margin: 0px 15px;
-    font-size: 16px;
+    margin: 0px 22px;
+    font-size: 15px;
     font-weight: 700;
     color: #ffffff;
   }
