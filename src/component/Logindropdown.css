@@ -1,0 +1,51 @@
+/* logindropdown */
+
+.logindropdowndetail{
+    position: absolute;
+    top: 6%;
+    padding: 14px 0px;
+    cursor: pointer;
+    right: 4%;
+  }
+
+  .logindropdowndiv{
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(81,111,144,.2);
+    background: #fff;
+    margin-top: 23px;
+  }
+
+  .loginlist{
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+  }
+
+  .loginlist:hover .loginlisttext{
+    color: #fff;
+  }
+
+  .loginlist:hover svg path,
+  .loginlist:hover{
+  fill:#fff;
+  color:#fff;
+  background-color: #20b2aa;
+  border-radius: 8px;
+}
+
+  .loginlisttext{
+    font-size: 16px;
+    font-weight: 500;
+    color: #373c49;
+    padding: 0 8px;
+  }
+
+  .loginhr{
+    margin: 3px 0;
+  }
+
+  

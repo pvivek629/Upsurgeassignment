@@ -3,11 +3,13 @@ import logo from "../component/Logo.svg";
 import search from "../component/search.svg"
 import arrow from "../component/arrow.svg"
 import { useState } from "react";
+import Logindropdown from "./Logindropdown";
 
 export default function Navbar() {
 
   const [dropdown, setDropdown] = useState(false);
-
+  const [logindropdown, setLoginDropdown] = useState(false);
+  
   return (
     <div className="Navbar">
       <header>
@@ -63,8 +65,16 @@ export default function Navbar() {
           
         </div>
         <div className="loginview">
-          <div className="loginuser">
-            <button class="loginbutton"><span class="loginspan">VP</span></button>           
+          <div 
+            className="loginuser" 
+            onMouseEnter={() => setLoginDropdown(true)}
+            onMouseLeave={() => setLoginDropdown(false)} >
+            <button class="loginbutton">
+              <span class="loginspan">VP</span>
+            </button>   
+            {logindropdown && (
+              <Logindropdown/>
+            )}        
           </div>
         </div>
         
