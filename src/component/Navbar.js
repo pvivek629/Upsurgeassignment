@@ -2,19 +2,46 @@ import "./Navbar.css";
 import logo from "../component/Logo.svg";
 import search from "../component/search.svg"
 import arrow from "../component/arrow.svg"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logindropdown from "./Logindropdown";
+import logochange from "../component/logochange.svg"
 
 export default function Navbar() {
 
   const [dropdown, setDropdown] = useState(false);
   const [logindropdown, setLoginDropdown] = useState(false);
+
+  const [navbarStyles, setNavbarStyles] = useState({
+    backgroundColor: '#000000',
+    color: 'white',
+  });
+
+  const [imageSrc, setImageSrc] = useState(logo);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const newStyles = {
+        backgroundColor: scrollPosition > 100 ? 'white' : '#000000',
+        color: scrollPosition > 100 ? 'black' : 'white',
+      };
+      setNavbarStyles(newStyles);
+      const newImageSrc = scrollPosition > 100 ? logochange : logo;
+      setImageSrc(newImageSrc);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
   return (
-    <div className="Navbar">
-      <header>
+    <div className="Navbar" >
+      <header style={navbarStyles}>
         <div className="headerleft">
-          <img src={logo} className="headerlogo" />
+          <img src={imageSrc} className="headerlogo" />
         </div>
         <div className="headerright">
           <div className="searchbody">
@@ -34,7 +61,7 @@ export default function Navbar() {
             onMouseEnter={() => setDropdown(true)}
             onMouseLeave={() => setDropdown(false)}
           >
-            <p className="learntext">Learn</p>
+            <p className="learntext" style={navbarStyles}>Learn</p>
             <div className="arrowicon">
               <img className="arrow" src={arrow} alt="" />
             </div>    
@@ -60,7 +87,7 @@ export default function Navbar() {
             )}       
           </div>
           <div>
-            <p className="subcriptiontext">Subscription</p>
+            <p className="subcriptiontext" style={navbarStyles}>Subscription</p>
           </div>
           
         </div>

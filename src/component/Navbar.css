@@ -6,6 +6,7 @@ header {
     padding: 0px 64px;
     align-items: center;
     background: #000000;
+    position: fixed;
   }
   
   /* Navbarleft */
@@ -96,7 +97,7 @@ header {
   
 
   .learnheader:hover .learntext{
-    color: #20b2aa;
+    color: #20b2aa !important;
     cursor: pointer;
   }
 
@@ -163,7 +164,7 @@ header {
   }
 
   .subcriptiontext:hover{
-    color: #20b2aa;
+    color: #20b2aa !important;
     cursor: pointer;
   }
   
